@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <h1>foodVenture
+            </h1>
+        </header>
+        <div class="divider">
+        </div>
+
+        <ul>
+            <div>
+                <ul>
+                    <li><a href="default.aspx">Home</a></li>
+                    
+                    <li><a href="resinfo.aspx">Restaurant Info</a>
+                    </li>
+                    
+                    <li><a href="contact.aspx">Contact Us</a></li>
+                </ul>
+            </div>
+            <div style="float: right">
+                <ul>
+                    <asp:Button ID="review" class="navbutton" runat="server" Text="Give Review" OnClick="review_Click" />
+                    <asp:Button ID="login" class="navbutton" runat="server" Text="Login" OnClick="login_Click" />
+                    <asp:Button ID="signup" class="navbutton" runat="server" Text="Sign Up" OnClick="signup_Click" />
+                </ul>
+            </div>
+
+        </ul>
+
+        <div>
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
